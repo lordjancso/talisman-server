@@ -52,21 +52,21 @@ class AdventureCard
     /**
      * @var string
      *
-     * @ORM\Column(name="sub_type", type="string", length=255)
+     * @ORM\Column(name="sub_type", type="string", length=255, nullable=true)
      */
     private $subType;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="strength", type="integer")
+     * @ORM\Column(name="strength", type="integer", nullable=true)
      */
     private $strength;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="craft", type="integer")
+     * @ORM\Column(name="craft", type="integer", nullable=true)
      */
     private $craft;
 

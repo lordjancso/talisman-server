@@ -52,7 +52,7 @@ class MiscellaneousCard
     /**
      * @var string
      *
-     * @ORM\Column(name="sub_type", type="string", length=255)
+     * @ORM\Column(name="sub_type", type="string", length=255, nullable=true)
      */
     private $subType;
 
