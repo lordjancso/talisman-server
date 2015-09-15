@@ -1,3 +1,7 @@
+move.roll:
+    path: /move/roll
+    defaults: { _controller: AppBundle:Move:roll }
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
