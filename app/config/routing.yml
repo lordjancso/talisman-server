@@ -2,6 +2,10 @@ move.roll:
     path: /move/roll
     defaults: { _controller: AppBundle:Move:roll }
 
+move.to:
+    path: /move/to/{location}
+    defaults: { _controller: AppBundle:Move:to }
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

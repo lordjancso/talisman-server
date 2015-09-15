@@ -78,6 +78,13 @@ class Player
     private $position;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="last_roll", type="integer", nullable=true)
+     */
+    private $lastRoll;
+
+    /**
      * Get id.
      *
      * @return int
@@ -277,5 +284,29 @@ class Player
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set lastRoll.
+     *
+     * @param int $lastRoll
+     *
+     * @return Player
+     */
+    public function setLastRoll($lastRoll)
+    {
+        $this->lastRoll = $lastRoll;
+
+        return $this;
+    }
+
+    /**
+     * Get lastRoll.
+     *
+     * @return int
+     */
+    public function getLastRoll()
+    {
+        return $this->lastRoll;
     }
 }
