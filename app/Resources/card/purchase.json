@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Armour",
+    "content": "<p>If you are defeated in battle and just lost a life, roll 1 die. If you roll a 4, 5, or 6, the Armour protected you and you did not lose that life, though you still lost the battle.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/9\/90\/Armour.png",
+    "type": "Object",
+    "sub_type": "Armour",
+    "encounter_number": 5,
+    "copies": 4,
+    "strength": null,
+    "craft": null
+  },
+  {
+    "title": "Axe",
+    "content": "<p>Add 1 to your Strength during battle.You may build a Raft when you are in the Woods or the Forest.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/f\/fb\/Axe.png",
+    "type": "Object",
+    "sub_type": "Weapon",
+    "encounter_number": 5,
+    "copies": 4,
+    "strength": null,
+    "craft": null
+  },
+  {
+    "title": "Helmet",
+    "content": "<p>If you are defeated in battle and just lost a life, roll 1 die. If you roll a 6, the Helmet protected you and you did not lose that life, though you still lost the battle.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/3\/37\/Helmet.png",
+    "type": "Object",
+    "sub_type": "Armour",
+    "encounter_number": 5,
+    "copies": 4,
+    "strength": null,
+    "craft": null
+  },
+  {
+    "title": "Mule",
+    "content": "<p>The Mule can carry an extra four Objects for you. If you lose the Mule, leave any surplus Objects of your choice in the space you are in.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/e\/e7\/Mule.png",
+    "type": "Follower",
+    "encounter_number": 5,
+    "copies": 4,
+    "sub_type": null,
+    "strength": null,
+    "craft": null
+  },
+  {
+    "title": "Raft",
+    "content": "<p>On your next turn, instead of your normal move, you may choose to cross the River to a space directly opposite the one you are in. Whether you cross or not, place the Raft on the discard pile, as it cannot be carried with you.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/0\/08\/Raft.png",
+    "type": "Object",
+    "encounter_number": 5,
+    "copies": 1,
+    "sub_type": null,
+    "strength": null,
+    "craft": null
+  },
+  {
+    "title": "Shield",
+    "content": "<p>If you are defeated in battle and just lost a life, roll 1 die.If you roll a 5 or 6, the Shield protected you and you did not lose that life, though you still lost the battle.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/c\/cf\/Shield.png",
+    "type": "Object",
+    "sub_type": "Armour",
+    "encounter_number": 5,
+    "copies": 4,
+    "strength": null,
+    "craft": null
+  },
+  {
+    "title": "Sword",
+    "content": "<p>Add 1 to your Strength during battle.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/8\/89\/Sword.png",
+    "type": "Object",
+    "sub_type": "Weapon",
+    "encounter_number": 5,
+    "copies": 3,
+    "strength": null,
+    "craft": null
+  },
+  {
+    "title": "Water Bottle",
+    "content": "<p>You do not lose a life in the Desert.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/1\/14\/WaterBottle.png",
+    "type": "Object",
+    "encounter_number": 5,
+    "copies": 4,
+    "sub_type": null,
+    "strength": null,
+    "craft": null
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Talisman",
+    "content": "<p>You may only enter the Valley of Fire if you have one of the fabled Talismans.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/9\/99\/Talisman.png",
+    "type": "Magic Object",
+    "encounter_number": 5,
+    "copies": 4,
+    "sub_type": null,
+    "strength": null,
+    "craft": null
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Acquisition",
+    "content": "<p>Cast at the start of your turn, before you move. Take one Object of your choice or one gold from any character.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/3\/3a\/Acquisition.png",
+    "copies": 1
+  },
+  {
+    "title": "Alchemy",
+    "content": "<p>Cast at the start of your turn, before you move. Convert any number of Objects you have into gold. Discard the chosen Objects and gain 1 gold for each.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/a\/a6\/Alchemy.png",
+    "copies": 1
+  },
+  {
+    "title": "Counterspell",
+    "content": "<p>Cast as required. Negate the effects of any Spell just cast, including the Command Spell.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/5\/51\/Counterspell.png",
+    "copies": 2
+  },
+  {
+    "title": "Destroy Magic",
+    "content": "<p>Cast at the start or end of your turn. No character, including yourself, may cast a Spell or use any Magic Object until the start of your next turn.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/8\/80\/DestroyMagic.png",
+    "copies": 1
+  },
+  {
+    "title": "Destruction",
+    "content": "<p>Cast at the start of your turn, or when you have just completed your move. Remove any faceup Adventure Card from the board and place it on the discard pile.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/6\/6b\/Destruction.png",
+    "copies": 2
+  },
+  {
+    "title": "Divination",
+    "content": "<p>Cast at the start of your turn, before you move. Take one secret look at the top five cards on the Adventure Deck.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/b\/b6\/Divination.png",
+    "copies": 1
+  },
+  {
+    "title": "Healing",
+    "content": "<p>Cast as required. By casting it on yourself or any other character the recipient is healed up to his life value.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/f\/f3\/Healing.png",
+    "copies": 2
+  },
+  {
+    "title": "Hex",
+    "content": "<p>Cast at the start of your turn, before you move. Place this card on any space in the Outer or Middle Region not already occupied by a character. It remains for 3 complete rounds, after which it is placed on the discard pile. Any character landing on the Hex loses a life.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/2\/2c\/Hex.png",
+    "copies": 1
+  },
+  {
+    "title": "Immobility",
+    "content": "<p>Cast at the start of a character\'s turn, before he moves. If cast on a character, he is immobilised (may do nothing apart from negating this Spell with Counterspell) for the duration of that turn. If cast on a creature, it cannot be attacked but may be evaded until the end of the turn.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/6\/6b\/Immobility.png",
+    "copies": 2
+  },
+  {
+    "title": "Invisibility",
+    "content": "<p>Cast as required. You may evade any creature or character until the end of this turn.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/e\/e5\/Invisibility.png",
+    "copies": 1
+  },
+  {
+    "title": "Mesmerism",
+    "content": "<p>Cast at the start of your turn, before you move. Take one Follower of your choice from any character.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/d\/d1\/Mesmerism.png",
+    "copies": 1
+  },
+  {
+    "title": "Nullify",
+    "content": "<p>Cast at any time on any character. That character must discard all of his Spells.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/1\/13\/Nullify.png",
+    "copies": 1
+  },
+  {
+    "title": "Preservation",
+    "content": "<p>Cast as required, on any character, Follower, or Enemy. It prevents a character from losing a life or a Follower from being killed. When cast on an Enemy, it prevents it from being killed, and the attack is considered a stand-off.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/d\/d7\/Preservation.png",
+    "copies": 1
+  },
+  {
+    "title": "Psionic Blast",
+    "content": "<p>Cast on yourself when you are about to engage in battle. Add your Craft value to your Strength until the end of the battle.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/c\/c1\/PsionicBlast.png",
+    "copies": 2
+  },
+  {
+    "title": "Random",
+    "content": "<p>Cast on any character at any time. He rolls 1 die to determine the effect on him:<\/p><p>1. Become a Toad for 3 turns<br \/>\r\n2. Lose Strength*<br \/>\r\n3. Lose Craft*<br \/>\r\n4. Lose all gold<br \/>\r\n5. Gain 1 Strength<br \/>\r\n6. Gain 1 life<\/p><p>* All but Strength and Craft values and those gained from Followers and Objects.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/7\/70\/Random.png",
+    "copies": 2
+  },
+  {
+    "title": "Teleport",
+    "content": "<p>Cast on yourself instead of rolling the die for movement. Teleport to any other space in the same Region. This Spell cannot be cast in the Inner Region.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/e\/e8\/Teleport.png",
+    "copies": 2
+  },
+  {
+    "title": "Temporal Warp",
+    "content": "<p>Cast at the start of your turn, before you move. You may take three successive turns instead of one before play passes to the next player.<\/p>",
+    "image": "http:\/\/www.talismanwiki.com\/wiki\/images\/e\/e6\/TemporalWarp.png",
+    "copies": 1
+  }
+]
