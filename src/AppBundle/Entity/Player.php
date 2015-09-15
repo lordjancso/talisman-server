@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Player
+ * Player.
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="AppBundle\Entity\PlayerRepository")
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Player
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -36,51 +36,51 @@ class Player
     private $alignment;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="strength", type="integer")
      */
     private $strength;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="craft", type="integer")
      */
     private $craft;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="life", type="integer")
      */
     private $life;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="fate", type="integer")
      */
     private $fate;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="gold", type="integer")
      */
     private $gold;
 
     /**
-     * @var integer
+     * @var int
      *
-     * @ORM\Column(name="location", type="integer")
+     * @ORM\Column(name="position", type="integer")
      */
-    private $location;
+    private $position;
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -88,9 +88,10 @@ class Player
     }
 
     /**
-     * Set character
+     * Set character.
      *
      * @param string $character
+     *
      * @return Player
      */
     public function setCharacter($character)
@@ -101,9 +102,9 @@ class Player
     }
 
     /**
-     * Get character
+     * Get character.
      *
-     * @return string 
+     * @return string
      */
     public function getCharacter()
     {
@@ -111,9 +112,10 @@ class Player
     }
 
     /**
-     * Set alignment
+     * Set alignment.
      *
      * @param string $alignment
+     *
      * @return Player
      */
     public function setAlignment($alignment)
@@ -124,9 +126,9 @@ class Player
     }
 
     /**
-     * Get alignment
+     * Get alignment.
      *
-     * @return string 
+     * @return string
      */
     public function getAlignment()
     {
@@ -134,9 +136,10 @@ class Player
     }
 
     /**
-     * Set strength
+     * Set strength.
      *
-     * @param integer $strength
+     * @param int $strength
+     *
      * @return Player
      */
     public function setStrength($strength)
@@ -147,9 +150,9 @@ class Player
     }
 
     /**
-     * Get strength
+     * Get strength.
      *
-     * @return integer 
+     * @return int
      */
     public function getStrength()
     {
@@ -157,9 +160,10 @@ class Player
     }
 
     /**
-     * Set craft
+     * Set craft.
      *
-     * @param integer $craft
+     * @param int $craft
+     *
      * @return Player
      */
     public function setCraft($craft)
@@ -170,9 +174,9 @@ class Player
     }
 
     /**
-     * Get craft
+     * Get craft.
      *
-     * @return integer 
+     * @return int
      */
     public function getCraft()
     {
@@ -180,9 +184,10 @@ class Player
     }
 
     /**
-     * Set life
+     * Set life.
      *
-     * @param integer $life
+     * @param int $life
+     *
      * @return Player
      */
     public function setLife($life)
@@ -193,9 +198,9 @@ class Player
     }
 
     /**
-     * Get life
+     * Get life.
      *
-     * @return integer 
+     * @return int
      */
     public function getLife()
     {
@@ -203,9 +208,10 @@ class Player
     }
 
     /**
-     * Set fate
+     * Set fate.
      *
-     * @param integer $fate
+     * @param int $fate
+     *
      * @return Player
      */
     public function setFate($fate)
@@ -216,9 +222,9 @@ class Player
     }
 
     /**
-     * Get fate
+     * Get fate.
      *
-     * @return integer 
+     * @return int
      */
     public function getFate()
     {
@@ -226,9 +232,10 @@ class Player
     }
 
     /**
-     * Set gold
+     * Set gold.
      *
-     * @param integer $gold
+     * @param int $gold
+     *
      * @return Player
      */
     public function setGold($gold)
@@ -239,9 +246,9 @@ class Player
     }
 
     /**
-     * Get gold
+     * Get gold.
      *
-     * @return integer 
+     * @return int
      */
     public function getGold()
     {
@@ -249,25 +256,26 @@ class Player
     }
 
     /**
-     * Set location
+     * Set position.
      *
-     * @param integer $location
+     * @param int $position
+     *
      * @return Player
      */
-    public function setLocation($location)
+    public function setPosition($position)
     {
-        $this->location = $location;
+        $this->position = $position;
 
         return $this;
     }
 
     /**
-     * Get location
+     * Get position.
      *
-     * @return integer 
+     * @return int
      */
-    public function getLocation()
+    public function getPosition()
     {
-        return $this->location;
+        return $this->position;
     }
 }

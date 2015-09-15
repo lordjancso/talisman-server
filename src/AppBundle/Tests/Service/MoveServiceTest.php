@@ -4,7 +4,7 @@ namespace AppBundle\Tests\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class CalculatorTest extends WebTestCase
+class MoveServiceTest extends WebTestCase
 {
     /**
      * @dataProvider positionAndRollProvider
@@ -28,18 +28,18 @@ class CalculatorTest extends WebTestCase
             array(
                 'position' => 14,
                 'roll' => 6,
-                'result' => array(8, 20, 34, 38)
+                'result' => array(8, 20, 34, 38),
             ),
             array(
                 'position' => 1,
                 'roll' => 1,
-                'result' => array(2, 24)
+                'result' => array(2, 24),
             ),
             array(
                 'position' => 38,
                 'roll' => 5,
-                'result' => array(27, 19, 15, 33)
-            )
+                'result' => array(27, 19, 15, 33),
+            ),
         );
     }
 }

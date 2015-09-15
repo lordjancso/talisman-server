@@ -9,7 +9,7 @@ class MoveService
     public function getPossibleDestinationsByRoll($position, $roll, $from = null, &$destinations = array())
     {
         $current = Space::get($position);
-        $roll--;
+        $roll = $roll - 1;
 
         foreach ($current as $next) {
             if ($from == $next) {

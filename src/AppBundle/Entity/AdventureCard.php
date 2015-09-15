@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * AdventureCard
+ * AdventureCard.
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="AppBundle\Entity\AdventureCardRepository")
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class AdventureCard
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -57,37 +57,37 @@ class AdventureCard
     private $subType;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="strength", type="integer", nullable=true)
      */
     private $strength;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="craft", type="integer", nullable=true)
      */
     private $craft;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="encounter_number", type="integer")
      */
     private $encounterNumber;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="quantity", type="integer")
      */
     private $quantity;
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -95,9 +95,10 @@ class AdventureCard
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return AdventureCard
      */
     public function setName($name)
@@ -108,7 +109,7 @@ class AdventureCard
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -118,9 +119,10 @@ class AdventureCard
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
+     *
      * @return AdventureCard
      */
     public function setDescription($description)
@@ -131,7 +133,7 @@ class AdventureCard
     }
 
     /**
-     * Get description
+     * Get description.
      *
      * @return string
      */
@@ -141,9 +143,10 @@ class AdventureCard
     }
 
     /**
-     * Set image
+     * Set image.
      *
      * @param string $image
+     *
      * @return AdventureCard
      */
     public function setImage($image)
@@ -154,7 +157,7 @@ class AdventureCard
     }
 
     /**
-     * Get image
+     * Get image.
      *
      * @return string
      */
@@ -164,9 +167,10 @@ class AdventureCard
     }
 
     /**
-     * Set type
+     * Set type.
      *
      * @param string $type
+     *
      * @return AdventureCard
      */
     public function setType($type)
@@ -177,7 +181,7 @@ class AdventureCard
     }
 
     /**
-     * Get type
+     * Get type.
      *
      * @return string
      */
@@ -187,9 +191,10 @@ class AdventureCard
     }
 
     /**
-     * Set subType
+     * Set subType.
      *
      * @param string $subType
+     *
      * @return AdventureCard
      */
     public function setSubType($subType)
@@ -200,7 +205,7 @@ class AdventureCard
     }
 
     /**
-     * Get subType
+     * Get subType.
      *
      * @return string
      */
@@ -210,9 +215,10 @@ class AdventureCard
     }
 
     /**
-     * Set strength
+     * Set strength.
      *
-     * @param integer $strength
+     * @param int $strength
+     *
      * @return AdventureCard
      */
     public function setStrength($strength)
@@ -223,9 +229,9 @@ class AdventureCard
     }
 
     /**
-     * Get strength
+     * Get strength.
      *
-     * @return integer
+     * @return int
      */
     public function getStrength()
     {
@@ -233,9 +239,10 @@ class AdventureCard
     }
 
     /**
-     * Set craft
+     * Set craft.
      *
-     * @param integer $craft
+     * @param int $craft
+     *
      * @return AdventureCard
      */
     public function setCraft($craft)
@@ -246,9 +253,9 @@ class AdventureCard
     }
 
     /**
-     * Get craft
+     * Get craft.
      *
-     * @return integer
+     * @return int
      */
     public function getCraft()
     {
@@ -256,9 +263,10 @@ class AdventureCard
     }
 
     /**
-     * Set encounterNumber
+     * Set encounterNumber.
      *
-     * @param integer $encounterNumber
+     * @param int $encounterNumber
+     *
      * @return AdventureCard
      */
     public function setEncounterNumber($encounterNumber)
@@ -269,9 +277,9 @@ class AdventureCard
     }
 
     /**
-     * Get encounterNumber
+     * Get encounterNumber.
      *
-     * @return integer
+     * @return int
      */
     public function getEncounterNumber()
     {
@@ -279,9 +287,10 @@ class AdventureCard
     }
 
     /**
-     * Set quantity
+     * Set quantity.
      *
-     * @param integer $quantity
+     * @param int $quantity
+     *
      * @return AdventureCard
      */
     public function setQuantity($quantity)
@@ -292,9 +301,9 @@ class AdventureCard
     }
 
     /**
-     * Get quantity
+     * Get quantity.
      *
-     * @return integer
+     * @return int
      */
     public function getQuantity()
     {

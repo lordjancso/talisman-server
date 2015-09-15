@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * PurchaseCard
+ * PurchaseCard.
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="AppBundle\Entity\PurchaseCardRepository")
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class PurchaseCard
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -57,23 +57,23 @@ class PurchaseCard
     private $subType;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="encounter_number", type="integer")
      */
     private $encounterNumber;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="quantity", type="integer")
      */
     private $quantity;
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -81,9 +81,10 @@ class PurchaseCard
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return PurchaseCard
      */
     public function setName($name)
@@ -94,9 +95,9 @@ class PurchaseCard
     }
 
     /**
-     * Get name
+     * Get name.
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -104,9 +105,10 @@ class PurchaseCard
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
+     *
      * @return PurchaseCard
      */
     public function setDescription($description)
@@ -117,9 +119,9 @@ class PurchaseCard
     }
 
     /**
-     * Get description
+     * Get description.
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -127,9 +129,10 @@ class PurchaseCard
     }
 
     /**
-     * Set image
+     * Set image.
      *
      * @param string $image
+     *
      * @return PurchaseCard
      */
     public function setImage($image)
@@ -140,9 +143,9 @@ class PurchaseCard
     }
 
     /**
-     * Get image
+     * Get image.
      *
-     * @return string 
+     * @return string
      */
     public function getImage()
     {
@@ -150,9 +153,10 @@ class PurchaseCard
     }
 
     /**
-     * Set type
+     * Set type.
      *
      * @param string $type
+     *
      * @return PurchaseCard
      */
     public function setType($type)
@@ -163,9 +167,9 @@ class PurchaseCard
     }
 
     /**
-     * Get type
+     * Get type.
      *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
@@ -173,9 +177,10 @@ class PurchaseCard
     }
 
     /**
-     * Set subType
+     * Set subType.
      *
      * @param string $subType
+     *
      * @return PurchaseCard
      */
     public function setSubType($subType)
@@ -186,9 +191,9 @@ class PurchaseCard
     }
 
     /**
-     * Get subType
+     * Get subType.
      *
-     * @return string 
+     * @return string
      */
     public function getSubType()
     {
@@ -196,9 +201,10 @@ class PurchaseCard
     }
 
     /**
-     * Set encounterNumber
+     * Set encounterNumber.
      *
-     * @param integer $encounterNumber
+     * @param int $encounterNumber
+     *
      * @return PurchaseCard
      */
     public function setEncounterNumber($encounterNumber)
@@ -209,9 +215,9 @@ class PurchaseCard
     }
 
     /**
-     * Get encounterNumber
+     * Get encounterNumber.
      *
-     * @return integer 
+     * @return int
      */
     public function getEncounterNumber()
     {
@@ -219,9 +225,10 @@ class PurchaseCard
     }
 
     /**
-     * Set quantity
+     * Set quantity.
      *
-     * @param integer $quantity
+     * @param int $quantity
+     *
      * @return PurchaseCard
      */
     public function setQuantity($quantity)
@@ -232,9 +239,9 @@ class PurchaseCard
     }
 
     /**
-     * Get quantity
+     * Get quantity.
      *
-     * @return integer 
+     * @return int
      */
     public function getQuantity()
     {

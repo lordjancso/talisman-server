@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * SpellCard
+ * SpellCard.
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="AppBundle\Entity\SpellCardRepository")
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class SpellCard
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -43,16 +43,16 @@ class SpellCard
     private $image;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="quantity", type="integer")
      */
     private $quantity;
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -60,9 +60,10 @@ class SpellCard
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return SpellCard
      */
     public function setName($name)
@@ -73,9 +74,9 @@ class SpellCard
     }
 
     /**
-     * Get name
+     * Get name.
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -83,9 +84,10 @@ class SpellCard
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
+     *
      * @return SpellCard
      */
     public function setDescription($description)
@@ -96,9 +98,9 @@ class SpellCard
     }
 
     /**
-     * Get description
+     * Get description.
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -106,9 +108,10 @@ class SpellCard
     }
 
     /**
-     * Set image
+     * Set image.
      *
      * @param string $image
+     *
      * @return SpellCard
      */
     public function setImage($image)
@@ -119,9 +122,9 @@ class SpellCard
     }
 
     /**
-     * Get image
+     * Get image.
      *
-     * @return string 
+     * @return string
      */
     public function getImage()
     {
@@ -129,9 +132,10 @@ class SpellCard
     }
 
     /**
-     * Set quantity
+     * Set quantity.
      *
-     * @param integer $quantity
+     * @param int $quantity
+     *
      * @return SpellCard
      */
     public function setQuantity($quantity)
@@ -142,9 +146,9 @@ class SpellCard
     }
 
     /**
-     * Get quantity
+     * Get quantity.
      *
-     * @return integer 
+     * @return int
      */
     public function getQuantity()
     {

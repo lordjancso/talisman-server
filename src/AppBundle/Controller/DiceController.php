@@ -8,6 +8,5 @@ class DiceController extends Controller
 {
     public function roll()
     {
-
     }
 }

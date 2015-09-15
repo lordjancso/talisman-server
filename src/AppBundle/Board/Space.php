@@ -53,7 +53,7 @@ class Space
         46 => array(45, 47),
         47 => array(46, 48),
         48 => array(41, 47),
-        49 => array(41)
+        49 => array(41),
     );
 
     public static function all()

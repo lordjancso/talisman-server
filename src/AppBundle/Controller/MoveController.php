@@ -10,7 +10,7 @@ class MoveController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        //$player = $em->getRepository('AppBundle:Player')->find($id);
+        $player = $em->getRepository('AppBundle:Player')->find(1);
 
         $position = 14;
         $roll = 6;

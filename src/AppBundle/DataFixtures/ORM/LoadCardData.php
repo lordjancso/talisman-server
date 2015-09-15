@@ -12,7 +12,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 class LoadCardData implements FixtureInterface
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function load(ObjectManager $manager)
     {

@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * MiscellaneousCard
+ * MiscellaneousCard.
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="AppBundle\Entity\MiscellaneousCardRepository")
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class MiscellaneousCard
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -57,23 +57,23 @@ class MiscellaneousCard
     private $subType;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="encounter_number", type="integer")
      */
     private $encounterNumber;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="quantity", type="integer")
      */
     private $quantity;
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -81,9 +81,10 @@ class MiscellaneousCard
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
+     *
      * @return MiscellaneousCard
      */
     public function setName($name)
@@ -94,9 +95,9 @@ class MiscellaneousCard
     }
 
     /**
-     * Get name
+     * Get name.
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -104,9 +105,10 @@ class MiscellaneousCard
     }
 
     /**
-     * Set description
+     * Set description.
      *
      * @param string $description
+     *
      * @return MiscellaneousCard
      */
     public function setDescription($description)
@@ -117,9 +119,9 @@ class MiscellaneousCard
     }
 
     /**
-     * Get description
+     * Get description.
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -127,9 +129,10 @@ class MiscellaneousCard
     }
 
     /**
-     * Set image
+     * Set image.
      *
      * @param string $image
+     *
      * @return MiscellaneousCard
      */
     public function setImage($image)
@@ -140,9 +143,9 @@ class MiscellaneousCard
     }
 
     /**
-     * Get image
+     * Get image.
      *
-     * @return string 
+     * @return string
      */
     public function getImage()
     {
@@ -150,9 +153,10 @@ class MiscellaneousCard
     }
 
     /**
-     * Set type
+     * Set type.
      *
      * @param string $type
+     *
      * @return MiscellaneousCard
      */
     public function setType($type)
@@ -163,9 +167,9 @@ class MiscellaneousCard
     }
 
     /**
-     * Get type
+     * Get type.
      *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
@@ -173,9 +177,10 @@ class MiscellaneousCard
     }
 
     /**
-     * Set subType
+     * Set subType.
      *
      * @param string $subType
+     *
      * @return MiscellaneousCard
      */
     public function setSubType($subType)
@@ -186,9 +191,9 @@ class MiscellaneousCard
     }
 
     /**
-     * Get subType
+     * Get subType.
      *
-     * @return string 
+     * @return string
      */
     public function getSubType()
     {
@@ -196,9 +201,10 @@ class MiscellaneousCard
     }
 
     /**
-     * Set encounterNumber
+     * Set encounterNumber.
      *
-     * @param integer $encounterNumber
+     * @param int $encounterNumber
+     *
      * @return MiscellaneousCard
      */
     public function setEncounterNumber($encounterNumber)
@@ -209,9 +215,9 @@ class MiscellaneousCard
     }
 
     /**
-     * Get encounterNumber
+     * Get encounterNumber.
      *
-     * @return integer 
+     * @return int
      */
     public function getEncounterNumber()
     {
@@ -219,9 +225,10 @@ class MiscellaneousCard
     }
 
     /**
-     * Set quantity
+     * Set quantity.
      *
-     * @param integer $quantity
+     * @param int $quantity
+     *
      * @return MiscellaneousCard
      */
     public function setQuantity($quantity)
@@ -232,9 +239,9 @@ class MiscellaneousCard
     }
 
     /**
-     * Get quantity
+     * Get quantity.
      *
-     * @return integer 
+     * @return int
      */
     public function getQuantity()
     {
