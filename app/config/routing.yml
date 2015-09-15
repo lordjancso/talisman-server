@@ -6,6 +6,10 @@ move.to:
     path: /move/to/{location}
     defaults: { _controller: AppBundle:Move:to }
 
+card.draw_adventure:
+    path: /card/draw-adventure
+    defaults: { _controller: AppBundle:Card:drawAdventure }
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
