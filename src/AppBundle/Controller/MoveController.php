@@ -43,6 +43,9 @@ class MoveController extends Controller
         $player->setPosition($location);
         $em->flush();
 
+        //TODO
+        //add location detalis and possible actions
+
         return new JsonResponse(array(
             'location' => $location,
         ));
