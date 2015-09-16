@@ -13,3 +13,11 @@ card.draw_adventure:
 card.accept:
     path: /card/accept/{id}
     defaults: { _controller: AppBundle:Card:accept }
+
+encounter.attack:
+    path: /encounter/attack/{id}
+    defaults: { _controller: AppBundle:Encounter:attackCard }
+
+encounter.fight:
+    path: /encounter/fight/{id}
+    defaults: { _controller: AppBundle:Encounter:fight }
