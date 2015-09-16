@@ -10,6 +10,6 @@ card.draw_adventure:
     path: /card/draw-adventure
     defaults: { _controller: AppBundle:Card:drawAdventure }
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+card.accept:
+    path: /card/accept/{id}
+    defaults: { _controller: AppBundle:Card:accept }
