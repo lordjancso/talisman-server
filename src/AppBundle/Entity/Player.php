@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -78,11 +79,19 @@ class Player
     private $position;
 
     /**
-     * @var int
+     * @var Log[]
      *
-     * @ORM\Column(name="last_roll", type="integer", nullable=true)
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Log", mappedBy="player", cascade={"persist"})
      */
-    private $lastRoll;
+    private $logs;
+
+    /**
+     * Constructor.
+     */
+    public function __construct()
+    {
+        $this->logs = new ArrayCollection();
+    }
 
     /**
      * Get id.
@@ -287,26 +296,36 @@ class Player
     }
 
     /**
-     * Set lastRoll.
+     * Add logs.
      *
-     * @param int $lastRoll
+     * @param \AppBundle\Entity\Log $logs
      *
      * @return Player
      */
-    public function setLastRoll($lastRoll)
+    public function addLog(\AppBundle\Entity\Log $logs)
     {
-        $this->lastRoll = $lastRoll;
+        $this->logs[] = $logs;
 
         return $this;
     }
 
     /**
-     * Get lastRoll.
+     * Remove logs.
      *
-     * @return int
+     * @param \AppBundle\Entity\Log $logs
      */
-    public function getLastRoll()
+    public function removeLog(\AppBundle\Entity\Log $logs)
     {
-        return $this->lastRoll;
+        $this->logs->removeElement($logs);
+    }
+
+    /**
+     * Get logs.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getLogs()
+    {
+        return $this->logs;
     }
 }
