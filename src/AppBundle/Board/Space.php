@@ -76,7 +76,7 @@ class Space
      *
      * @param $id
      *
-     * @return mixed
+     * @return array
      */
     public static function get($id)
     {
