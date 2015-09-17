@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Log;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
@@ -17,7 +18,8 @@ class MoveController extends Controller
 
         $possible_destinations = $this->get('app.move')->getPossibleDestinationsByRoll($position, $roll);
 
-        $player->setLastRoll($roll);
+        $this->get('app.logger')->create($player, 'roll', $roll);
+
         $em->flush();
 
         return new JsonResponse(array(
@@ -32,13 +34,16 @@ class MoveController extends Controller
         $player = $em->getRepository('AppBundle:Player')->find(1);
 
         $position = $player->getPosition();
-        $roll = $player->getLastRoll();
+        $log = $em->getRepository('AppBundle:Log')->findLastRoll($player);
+        $roll = $log->getSubjects()[0];
 
         $possible_destinations = $this->get('app.move')->getPossibleDestinationsByRoll($position, $roll);
 
         if (!in_array($location, $possible_destinations)) {
             throw $this->createNotFoundException();
         }
+
+        $this->get('app.logger')->create($player, 'move', $location);
 
         $player->setPosition($location);
         $em->flush();

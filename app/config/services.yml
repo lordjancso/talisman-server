@@ -4,6 +4,8 @@ parameters:
 #    parameter_name: value
 
 services:
+    app.logger:
+        class: AppBundle\Service\LoggerService
+        arguments: ["@doctrine.orm.entity_manager"]
     app.move:
         class: AppBundle\Service\MoveService
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
