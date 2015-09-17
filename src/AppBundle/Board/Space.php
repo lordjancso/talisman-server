@@ -4,6 +4,11 @@ namespace AppBundle\Board;
 
 class Space
 {
+    /**
+     * The fields of the board and its connections.
+     *
+     * @var array
+     */
     private static $graph = array(
         1 => array(2, 24),
         2 => array(1, 3),
@@ -56,11 +61,23 @@ class Space
         49 => array(41),
     );
 
+    /**
+     * Return all fields.
+     *
+     * @return array
+     */
     public static function all()
     {
         return self::$graph;
     }
 
+    /**
+     * Return a single field.
+     *
+     * @param $id
+     *
+     * @return mixed
+     */
     public static function get($id)
     {
         return self::$graph[$id];
