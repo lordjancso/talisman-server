@@ -17,7 +17,9 @@ class LoggerService
 
     public function create(Player $player, $action, $subjects)
     {
-        if (!is_array($subjects)) {
+        if (is_object($subjects)) {
+            $subjects = array($subjects->getId());
+        } elseif (!is_array($subjects)) {
             $subjects = array($subjects);
         }
 
