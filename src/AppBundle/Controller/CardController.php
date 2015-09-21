@@ -14,6 +14,10 @@ class CardController extends Controller
 
         $card = $em->getRepository('AppBundle:AdventureCard')->findRandom();
 
+        $this->get('app.logger')->create($player, 'draw_adventure', $card);
+
+        $em->flush();
+
         return new JsonResponse(array(
             'id' => $card->getId(),
             'name' => $card->getName(),
