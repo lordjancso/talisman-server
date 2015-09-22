@@ -14,7 +14,7 @@ class CardController extends Controller
 
         $cards = array();
 
-        for ($i = 0; $i < $count; $i++) {
+        for ($i = 0; $i < $count; ++$i) {
             $card = $em->getRepository('AppBundle:AdventureCard')->findRandom();
 
             $cards[] = array(
