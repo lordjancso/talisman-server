@@ -34,18 +34,20 @@ class EncounterController extends Controller
 
         $card = $em->getRepository('AppBundle:AdventureCard')->find($id);
 
-        $player_roll = mt_rand(1, 6);
-        $enemy_roll = mt_rand(1, 6);
+        $playerRoll = mt_rand(1, 6);
+        $enemyRoll = mt_rand(1, 6);
+        $playerStrength = $player->getStrength();
+        $enemyStrength = $card->getStrength();
 
-        $player_strength = $player->getStrength() + $player_roll;
-        $enemy_strength = $card->getStrength() + $enemy_roll;
+        $playerResult = $playerStrength + $playerRoll;
+        $enemyResult = $enemyStrength + $enemyRoll;
 
-        if ($player_strength > $enemy_strength) {
+        if ($playerResult > $enemyResult) {
             $result = 'win';
             $player->setLife($player->getLife() - 1);
 
             $em->flush();
-        } elseif ($player_strength < $enemy_strength) {
+        } elseif ($playerResult < $enemyResult) {
             $result = 'lose';
         } else {
             $result = 'standoff';
@@ -53,6 +55,12 @@ class EncounterController extends Controller
 
         return new JsonResponse(array(
             'result' => $result,
+            'player_strength' => $playerStrength,
+            'enemy_strength' => $enemyStrength,
+            'player_roll' => $playerRoll,
+            'enemy_roll' => $enemyRoll,
+            'player_result' => $playerResult,
+            'enemy_result' => $enemyResult,
         ));
     }
 }
