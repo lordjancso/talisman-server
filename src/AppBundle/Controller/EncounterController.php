@@ -44,11 +44,12 @@ class EncounterController extends Controller
 
         if ($playerResult > $enemyResult) {
             $result = 'win';
+        } elseif ($playerResult < $enemyResult) {
+            $result = 'lose';
+
             $player->setLife($player->getLife() - 1);
 
             $em->flush();
-        } elseif ($playerResult < $enemyResult) {
-            $result = 'lose';
         } else {
             $result = 'standoff';
         }
