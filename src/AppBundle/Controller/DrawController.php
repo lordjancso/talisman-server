@@ -20,7 +20,6 @@ class DrawController extends Controller
         $em = $this->getDoctrine()->getManager('default');
         $player = $em->getRepository('AppBundle:Player')->find(1);
 
-        $allowedActions = array();
         $cards = array();
         $count = 1; //based on your location
 
@@ -39,14 +38,10 @@ class DrawController extends Controller
                 'encounter_number' => $card->getEncounterNumber(),
             );
 
-            if (!in_array('encounter_attack', $allowedActions)) {
-                $allowedActions[] = 'encounter_attack';
-            }
-
             $this->get('app.logger')->create($player, 'draw_adventure', $card);
         }
 
-        $player->setAllowedActions($allowedActions);
+        $player->setAllowedActions(array('encounter_adventure'));
         $em->flush();
 
         return new JsonResponse($cards);
