@@ -2,11 +2,19 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Security\Annotation\RequiredAction;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class MoveController extends Controller
 {
+    /**
+     * Roll with one dice to move.
+     *
+     * @RequiredAction("move_roll")
+     *
+     * @return JsonResponse
+     */
     public function rollAction()
     {
         $em = $this->getDoctrine()->getManager('default');
@@ -19,6 +27,7 @@ class MoveController extends Controller
 
         $this->get('app.logger')->create($player, 'roll', $roll);
 
+        $player->setAllowedActions(array('move'));
         $em->flush();
 
         return new JsonResponse(array(
@@ -27,6 +36,15 @@ class MoveController extends Controller
         ));
     }
 
+    /**
+     * Move to a specific field.
+     *
+     * @RequiredAction("move")
+     *
+     * @param $location
+     *
+     * @return JsonResponse
+     */
     public function toAction($location)
     {
         $em = $this->getDoctrine()->getManager('default');
@@ -44,6 +62,7 @@ class MoveController extends Controller
 
         $this->get('app.logger')->create($player, 'move', $location);
 
+        $player->setAllowedActions(array('draw_adventure'));
         $player->setPosition($location);
         $em->flush();
 
