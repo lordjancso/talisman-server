@@ -2,11 +2,21 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Security\Annotation\RequiredAction;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DrawController extends Controller
 {
+    /**
+     * Draw one or more random adventure card from the deck.
+     *
+     * @RequiredAction("draw_adventure")
+     *
+     * @param $count
+     *
+     * @return JsonResponse
+     */
     public function adventureAction($count)
     {
         $em = $this->getDoctrine()->getManager('default');

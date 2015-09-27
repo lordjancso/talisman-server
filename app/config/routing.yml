@@ -6,7 +6,7 @@ move.to:
     path: /move/to/{location}
     defaults: { _controller: AppBundle:Move:to }
 
-draw_adventure:
+draw.adventure:
     path: /draw/{count}/adventure
     defaults: { _controller: AppBundle:Draw:adventure }
 
