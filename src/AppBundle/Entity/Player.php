@@ -79,6 +79,13 @@ class Player
     private $position;
 
     /**
+     * @var array
+     *
+     * @ORM\Column(name="allowed_actions", type="simple_array")
+     */
+    private $allowedActions;
+
+    /**
      * @var Log[]
      *
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Log", mappedBy="player", cascade={"persist"})
@@ -293,6 +300,30 @@ class Player
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set allowedActions.
+     *
+     * @param array $allowedActions
+     *
+     * @return Player
+     */
+    public function setAllowedActions($allowedActions)
+    {
+        $this->allowedActions = $allowedActions;
+
+        return $this;
+    }
+
+    /**
+     * Get allowedActions.
+     *
+     * @return array
+     */
+    public function getAllowedActions()
+    {
+        return $this->allowedActions;
     }
 
     /**
