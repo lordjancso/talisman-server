@@ -18,6 +18,6 @@ encounter.attack:
     path: /encounter/attack/{id}
     defaults: { _controller: AppBundle:Encounter:attackCard }
 
-encounter.fight:
-    path: /encounter/fight/{id}
-    defaults: { _controller: AppBundle:Encounter:fight }
+fight.adventure:
+    path: /fight/adventure
+    defaults: { _controller: AppBundle:Fight:adventure }

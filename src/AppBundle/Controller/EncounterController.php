@@ -45,6 +45,9 @@ class EncounterController extends Controller
         }
         array_multisort($encounterNumbers, SORT_ASC, $cards);
 
+        $player->setAllowedActions(array('fight_adventure'));
+        $em->flush();
+
         return new JsonResponse($cards);
     }
 
@@ -65,44 +68,6 @@ class EncounterController extends Controller
             'strength' => $card->getStrength(),
             'craft' => $card->getCraft(),
             'encounter_number' => $card->getEncounterNumber(),
-        ));
-    }
-
-    public function fightAction($id)
-    {
-        $em = $this->getDoctrine()->getManager('default');
-        $player = $em->getRepository('AppBundle:Player')->find(1);
-
-        $card = $em->getRepository('AppBundle:AdventureCard')->find($id);
-
-        $playerRoll = mt_rand(1, 6);
-        $enemyRoll = mt_rand(1, 6);
-        $playerStrength = $player->getStrength();
-        $enemyStrength = $card->getStrength();
-
-        $playerResult = $playerStrength + $playerRoll;
-        $enemyResult = $enemyStrength + $enemyRoll;
-
-        if ($playerResult > $enemyResult) {
-            $result = 'win';
-        } elseif ($playerResult < $enemyResult) {
-            $result = 'lose';
-
-            $player->setLife($player->getLife() - 1);
-
-            $em->flush();
-        } else {
-            $result = 'standoff';
-        }
-
-        return new JsonResponse(array(
-            'result' => $result,
-            'player_strength' => $playerStrength,
-            'enemy_strength' => $enemyStrength,
-            'player_roll' => $playerRoll,
-            'enemy_roll' => $enemyRoll,
-            'player_result' => $playerResult,
-            'enemy_result' => $enemyResult,
         ));
     }
 }
