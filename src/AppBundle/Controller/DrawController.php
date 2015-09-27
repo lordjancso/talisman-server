@@ -13,15 +13,14 @@ class DrawController extends Controller
      *
      * @RequiredAction("draw_adventure")
      *
-     * @param $count
-     *
      * @return JsonResponse
      */
-    public function adventureAction($count)
+    public function adventureAction()
     {
         $em = $this->getDoctrine()->getManager('default');
         $player = $em->getRepository('AppBundle:Player')->find(1);
 
+        $count = 1; //based on your location
         $cards = array();
 
         for ($i = 0; $i < $count; ++$i) {

@@ -7,7 +7,7 @@ move.to:
     defaults: { _controller: AppBundle:Move:to }
 
 draw.adventure:
-    path: /draw/{count}/adventure
+    path: /draw/adventure
     defaults: { _controller: AppBundle:Draw:adventure }
 
 card.accept:
