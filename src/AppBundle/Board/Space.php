@@ -213,15 +213,15 @@ class Space
     /**
      * Return a single property of a single field.
      *
-     * @param $id
+     * @param $position
      * @param $name
      *
      * @return mixed
      */
-    public static function get($id, $name)
+    public static function get($position, $name)
     {
-        if (isset(self::$graph[$id][$name])) {
-            return self::$graph[$id][$name];
+        if (isset(self::$graph[$position][$name])) {
+            return self::$graph[$position][$name];
         }
 
         return false;
