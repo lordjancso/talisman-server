@@ -45,7 +45,25 @@ class EncounterController extends Controller
         }
         array_multisort($encounterNumbers, SORT_ASC, $cards);
 
-        $player->setAllowedActions(array('fight_adventure'));
+        if ($cards[0]['type'] == 'Enemy') {
+            $allowedActions = array('fight_enemy');
+        } elseif ($cards[0]['type'] == 'Event') {
+            $allowedActions = array('encounter_event');
+        } elseif ($cards[0]['type'] == 'Follower') {
+            $allowedActions = array('take_follower', 'leave_follower');
+        } elseif ($cards[0]['type'] == 'Magic Object') {
+            $allowedActions = array('take_magic_object');
+        } elseif ($cards[0]['type'] == 'Object') {
+            $allowedActions = array('take_object');
+        } elseif ($cards[0]['type'] == 'Place') {
+            $allowedActions = array('encounter_place');
+        } elseif ($cards[0]['type'] == 'Stranger') {
+            $allowedActions = array('encounter_stranger');
+        } else {
+            throw new \Exception('Invalid adventure card type: '.$cards[0]['type']);
+        }
+
+        $player->setAllowedActions($allowedActions);
         $em->flush();
 
         return new JsonResponse($cards);
