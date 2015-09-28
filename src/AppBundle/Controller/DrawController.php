@@ -43,7 +43,7 @@ class DrawController extends Controller
             $this->get('app.logger')->create($player, 'draw_adventure', $card);
         }
 
-        $player->setAllowedActions(array('encounter_adventure'));
+        $player->setAllowedActions(array('draw_adventure', 'encounter_adventure'));
         $em->flush();
 
         return new JsonResponse($cards);

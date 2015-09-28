@@ -22,6 +22,14 @@ take.follower:
     path: /take/{id}/follower
     defaults: { _controller: AppBundle:Take:follower }
 
+take.object:
+    path: /take/{id}/object
+    defaults: { _controller: AppBundle:Take:object }
+
+take.magic_object:
+    path: /take/{id}/magic-object
+    defaults: { _controller: AppBundle:Take:magicObject }
+
 fight.adventure:
     path: /fight/adventure
     defaults: { _controller: AppBundle:Fight:adventure }
