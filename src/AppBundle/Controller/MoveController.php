@@ -33,6 +33,7 @@ class MoveController extends Controller
         return new JsonResponse(array(
             'roll' => $roll,
             'possible_destinations' => $possibleDestinations,
+            'allowed_actions' => $player->getAllowedActions(),
         ));
     }
 
@@ -71,9 +72,7 @@ class MoveController extends Controller
 
         return new JsonResponse(array(
             'location' => $location,
-            'actions' => array(
-                'draw_adventure',
-            ),
+            'allowed_actions' => $player->getAllowedActions(),
         ));
     }
 }
