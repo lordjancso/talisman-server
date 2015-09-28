@@ -66,26 +66,37 @@ class EncounterController extends Controller
         $player->setAllowedActions($allowedActions);
         $em->flush();
 
-        return new JsonResponse($cards);
+        return new JsonResponse(array(
+            'cards' => $cards,
+            'allowed_actions' => $player->getAllowedActions(),
+        ));
     }
 
-    public function attackCardAction($id)
+    public function enemyAction()
     {
         $em = $this->getDoctrine()->getManager('default');
         $player = $em->getRepository('AppBundle:Player')->find(1);
 
-        $card = $em->getRepository('AppBundle:AdventureCard')->find($id);
+        $log = $em->getRepository('AppBundle:Log')->findLastDrawnAdventureCard($player);
+
+        $card = $em->getRepository('AppBundle:AdventureCard')->find($log->getSubjects()[0]);
+
+        $player->setAllowedActions(array('fight_adventure'));
+        $em->flush();
 
         return new JsonResponse(array(
-            'id' => $card->getId(),
-            'name' => $card->getName(),
-            'description' => $card->getDescription(),
-            'image' => $card->getImage(),
-            'type' => $card->getType(),
-            'sub_type' => $card->getSubType(),
-            'strength' => $card->getStrength(),
-            'craft' => $card->getCraft(),
-            'encounter_number' => $card->getEncounterNumber(),
+            'card' => array(
+                'id' => $card->getId(),
+                'name' => $card->getName(),
+                'description' => $card->getDescription(),
+                'image' => $card->getImage(),
+                'type' => $card->getType(),
+                'sub_type' => $card->getSubType(),
+                'strength' => $card->getStrength(),
+                'craft' => $card->getCraft(),
+                'encounter_number' => $card->getEncounterNumber(),
+            ),
+            'allowed_actions' => $player->getAllowedActions(),
         ));
     }
 }

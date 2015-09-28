@@ -38,11 +38,12 @@ class FightController extends Controller
             $result = 'lose';
 
             $player->setLife($player->getLife() - 1);
-
-            $em->flush();
         } else {
             $result = 'standoff';
         }
+
+        $player->setAllowedActions(array('turn_end'));
+        $em->flush();
 
         return new JsonResponse(array(
             'result' => $result,
@@ -52,6 +53,7 @@ class FightController extends Controller
             'enemy_roll' => $enemyRoll,
             'player_result' => $playerResult,
             'enemy_result' => $enemyResult,
+            'allowed_actions' => $player->getAllowedActions(),
         ));
     }
 }

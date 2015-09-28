@@ -14,9 +14,9 @@ encounter.adventure:
     path: /encounter/adventure
     defaults: { _controller: AppBundle:Encounter:adventure }
 
-encounter.attack:
-    path: /encounter/attack/{id}
-    defaults: { _controller: AppBundle:Encounter:attackCard }
+encounter.enemy:
+    path: /encounter/enemy
+    defaults: { _controller: AppBundle:Encounter:enemy }
 
 take.follower:
     path: /take/{id}/follower
