@@ -197,7 +197,7 @@ class Space
         ),
         49 => array(
             'connections' => array(41),
-        )
+        ),
     );
 
     /**
@@ -213,8 +213,8 @@ class Space
     /**
      * Return a single property of a single field.
      *
-     * @param int $id
-     * @param string $name
+     * @param $id
+     * @param $name
      *
      * @return mixed
      */
