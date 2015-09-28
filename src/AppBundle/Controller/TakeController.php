@@ -33,6 +33,9 @@ class TakeController extends Controller
         //TODO
         //take follower card
 
+        $player->setAllowedActions(array('turn_end'));
+        $em->flush();
+
         return new JsonResponse(array('turn_end'));
     }
 }

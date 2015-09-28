@@ -46,7 +46,7 @@ class EncounterController extends Controller
         array_multisort($encounterNumbers, SORT_ASC, $cards);
 
         if ($cards[0]['type'] == 'Enemy') {
-            $allowedActions = array('fight_enemy');
+            $allowedActions = array('encounter_enemy');
         } elseif ($cards[0]['type'] == 'Event') {
             $allowedActions = array('encounter_event');
         } elseif ($cards[0]['type'] == 'Follower') {
