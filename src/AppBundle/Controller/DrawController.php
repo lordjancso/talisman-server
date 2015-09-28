@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Board\Space;
 use AppBundle\Security\Annotation\RequiredAction;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -21,7 +22,8 @@ class DrawController extends Controller
         $player = $em->getRepository('AppBundle:Player')->find(1);
 
         $cards = array();
-        $count = 1; //based on your location
+        $position = $player->getPosition();
+        $count = Space::get($position, 'draw');
 
         for ($i = 0; $i < $count; ++$i) {
             $card = $em->getRepository('AppBundle:AdventureCard')->findRandom();
