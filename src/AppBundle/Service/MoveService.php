@@ -9,10 +9,10 @@ class MoveService
     /**
      * Calculate possible destinations of a player by roll value and current position.
      *
-     * @param $position int
-     * @param $roll int
-     * @param $from null|int
-     * @param $destinations array
+     * @param $position
+     * @param $roll
+     * @param $from
+     * @param $destinations
      *
      * @return array
      */
