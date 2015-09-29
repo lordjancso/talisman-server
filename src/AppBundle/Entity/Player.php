@@ -86,11 +86,25 @@ class Player
     private $allowedActions;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="api_key", type="string", length=255)
+     */
+    private $apiKey;
+
+    /**
      * @var Log[]
      *
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Log", mappedBy="player", cascade={"persist"})
      */
     private $logs;
+
+    /**
+     * @var User
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="players")
+     */
+    private $user;
 
     /**
      * Constructor.
@@ -327,6 +341,30 @@ class Player
     }
 
     /**
+     * Set apiKey.
+     *
+     * @param string $apiKey
+     *
+     * @return Player
+     */
+    public function setApiKey($apiKey)
+    {
+        $this->apiKey = $apiKey;
+
+        return $this;
+    }
+
+    /**
+     * Get apiKey.
+     *
+     * @return string
+     */
+    public function getApiKey()
+    {
+        return $this->apiKey;
+    }
+
+    /**
      * Add logs.
      *
      * @param \AppBundle\Entity\Log $logs
@@ -358,5 +396,29 @@ class Player
     public function getLogs()
     {
         return $this->logs;
+    }
+
+    /**
+     * Set user.
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Player
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user.
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
