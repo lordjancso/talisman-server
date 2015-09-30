@@ -14,13 +14,13 @@ security:
             security: false
 
         main:
-            pattern: ^/
-            stateless: true
-            simple_preauth:
-                authenticator: security.api_key_authenticator
-            provider: api_key_user_provider
+#            pattern: ^/
+#            stateless: true
+#            simple_preauth:
+#                authenticator: security.api_key_authenticator
+#            provider: api_key_user_provider
 
-            # anonymous: ~
+            anonymous: ~
             # activate different ways to authenticate
 
             # http_basic: ~
