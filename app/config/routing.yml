@@ -1,40 +1,43 @@
-move.roll:
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+api.move.roll:
     path: /api/move/roll
     defaults: { _controller: AppBundle:Move:roll }
 
-move.to:
+api.move.to:
     path: /api/move/to/{location}
     defaults: { _controller: AppBundle:Move:to }
 
-draw.adventure:
+api.draw.adventure:
     path: /api/draw/adventure
     defaults: { _controller: AppBundle:Draw:adventure }
 
-encounter.adventure:
+api.encounter.adventure:
     path: /api/encounter/adventure
     defaults: { _controller: AppBundle:Encounter:adventure }
 
-encounter.enemy:
+api.encounter.enemy:
     path: /api/encounter/enemy
     defaults: { _controller: AppBundle:Encounter:enemy }
 
-take.follower:
+api.take.follower:
     path: /api/take/{id}/follower
     defaults: { _controller: AppBundle:Take:follower }
 
-take.object:
+api.take.object:
     path: /api/take/{id}/object
     defaults: { _controller: AppBundle:Take:object }
 
-take.magic_object:
+api.take.magic_object:
     path: /api/take/{id}/magic-object
     defaults: { _controller: AppBundle:Take:magicObject }
 
-fight.adventure:
+api.fight.adventure:
     path: /api/fight/adventure
     defaults: { _controller: AppBundle:Fight:adventure }
 
-turn.end:
+api.turn.end:
     path: /api/turn/end
     defaults: { _controller: AppBundle:Turn:end }
 
