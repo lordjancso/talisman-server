@@ -1,39 +1,43 @@
 move.roll:
-    path: /move/roll
+    path: /api/move/roll
     defaults: { _controller: AppBundle:Move:roll }
 
 move.to:
-    path: /move/to/{location}
+    path: /api/move/to/{location}
     defaults: { _controller: AppBundle:Move:to }
 
 draw.adventure:
-    path: /draw/adventure
+    path: /api/draw/adventure
     defaults: { _controller: AppBundle:Draw:adventure }
 
 encounter.adventure:
-    path: /encounter/adventure
+    path: /api/encounter/adventure
     defaults: { _controller: AppBundle:Encounter:adventure }
 
 encounter.enemy:
-    path: /encounter/enemy
+    path: /api/encounter/enemy
     defaults: { _controller: AppBundle:Encounter:enemy }
 
 take.follower:
-    path: /take/{id}/follower
+    path: /api/take/{id}/follower
     defaults: { _controller: AppBundle:Take:follower }
 
 take.object:
-    path: /take/{id}/object
+    path: /api/take/{id}/object
     defaults: { _controller: AppBundle:Take:object }
 
 take.magic_object:
-    path: /take/{id}/magic-object
+    path: /api/take/{id}/magic-object
     defaults: { _controller: AppBundle:Take:magicObject }
 
 fight.adventure:
-    path: /fight/adventure
+    path: /api/fight/adventure
     defaults: { _controller: AppBundle:Fight:adventure }
 
 turn.end:
-    path: /turn/end
+    path: /api/turn/end
     defaults: { _controller: AppBundle:Turn:end }
+
+frontend.start:
+    path: /start
+    defaults: { _controller: AppBundle:Frontend:start }
