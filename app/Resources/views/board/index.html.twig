@@ -1,85 +1,96 @@
 {% extends 'base.html.twig' %}
 
 {% block css %}
-<style>
-    table {
-        border-spacing: 0;
-        border-collapse: collapse;
-    }
+    <style>
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
 
-    td {
-        width: 100px;
-        height: 100px;
-        border: 1px solid black;
-        text-align: center;
-    }
-</style>
+        td {
+            width: 180px;
+            height: 180px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function () {
+            $('td').on('mouseover', function() {
+                var description = $(this).data('description');
+                console.log(description);
+            });
+        });
+    </script>
 {% endblock %}
 
 {% block body %}
     <table>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
+            <td data-description="{{ spaces[1]['description'] }}">1.<br/>{{ spaces[1]['name'] }}</td>
+            <td data-description="{{ spaces[2]['description'] }}">2.<br/>{{ spaces[2]['name'] }}</td>
+            <td data-description="{{ spaces[3]['description'] }}">3.<br/>{{ spaces[3]['name'] }}</td>
+            <td data-description="{{ spaces[4]['description'] }}">4.<br/>{{ spaces[4]['name'] }}</td>
+            <td data-description="{{ spaces[5]['description'] }}">5.<br/>{{ spaces[5]['name'] }}</td>
+            <td data-description="{{ spaces[6]['description'] }}">6.<br/>{{ spaces[6]['name'] }}</td>
+            <td data-description="{{ spaces[7]['description'] }}">7.<br/>{{ spaces[7]['name'] }}</td>
         </tr>
         <tr>
-            <td>24</td>
-            <td>25</td>
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
-            <td>29</td>
-            <td>8</td>
+            <td data-description="{{ spaces[24]['description'] }}">24.<br/>{{ spaces[24]['name'] }}</td>
+            <td data-description="{{ spaces[25]['description'] }}">25.<br/>{{ spaces[25]['name'] }}</td>
+            <td data-description="{{ spaces[26]['description'] }}">26.<br/>{{ spaces[26]['name'] }}</td>
+            <td data-description="{{ spaces[27]['description'] }}">27.<br/>{{ spaces[27]['name'] }}</td>
+            <td data-description="{{ spaces[28]['description'] }}">28.<br/>{{ spaces[28]['name'] }}</td>
+            <td data-description="{{ spaces[29]['description'] }}">29.<br/>{{ spaces[29]['name'] }}</td>
+            <td data-description="{{ spaces[8]['description'] }}">8.<br/>{{ spaces[8]['name'] }}</td>
         </tr>
         <tr>
-            <td>23</td>
-            <td>40</td>
-            <td>41</td>
-            <td>42</td>
-            <td>43</td>
-            <td>30</td>
-            <td>9</td>
+            <td data-description="{{ spaces[23]['description'] }}">23.<br/>{{ spaces[23]['name'] }}</td>
+            <td data-description="{{ spaces[40]['description'] }}">40.<br/>{{ spaces[40]['name'] }}</td>
+            <td data-description="{{ spaces[41]['description'] }}">41.<br/>{{ spaces[41]['name'] }}</td>
+            <td data-description="{{ spaces[42]['description'] }}">42.<br/>{{ spaces[42]['name'] }}</td>
+            <td data-description="{{ spaces[43]['description'] }}">43.<br/>{{ spaces[43]['name'] }}</td>
+            <td data-description="{{ spaces[30]['description'] }}">30.<br/>{{ spaces[30]['name'] }}</td>
+            <td data-description="{{ spaces[9]['description'] }}">9.<br/>{{ spaces[9]['name'] }}</td>
         </tr>
         <tr>
-            <td>22</td>
-            <td>39</td>
-            <td>48</td>
-            <td>49</td>
-            <td>44</td>
-            <td>31</td>
-            <td>10</td>
+            <td data-description="{{ spaces[22]['description'] }}">22.<br/>{{ spaces[22]['name'] }}</td>
+            <td data-description="{{ spaces[39]['description'] }}">39.<br/>{{ spaces[39]['name'] }}</td>
+            <td data-description="{{ spaces[48]['description'] }}">48.<br/>{{ spaces[48]['name'] }}</td>
+            <td data-description="{{ spaces[49]['description'] }}">49.<br/>{{ spaces[49]['name'] }}</td>
+            <td data-description="{{ spaces[44]['description'] }}">44.<br/>{{ spaces[44]['name'] }}</td>
+            <td data-description="{{ spaces[31]['description'] }}">31.<br/>{{ spaces[31]['name'] }}</td>
+            <td data-description="{{ spaces[10]['description'] }}">10.<br/>{{ spaces[10]['name'] }}</td>
         </tr>
         <tr>
-            <td>21</td>
-            <td>38</td>
-            <td>47</td>
-            <td>46</td>
-            <td>45</td>
-            <td>32</td>
-            <td>11</td>
+            <td data-description="{{ spaces[21]['description'] }}">21.<br/>{{ spaces[21]['name'] }}</td>
+            <td data-description="{{ spaces[38]['description'] }}">38.<br/>{{ spaces[38]['name'] }}</td>
+            <td data-description="{{ spaces[47]['description'] }}">47.<br/>{{ spaces[47]['name'] }}</td>
+            <td data-description="{{ spaces[46]['description'] }}">46.<br/>{{ spaces[46]['name'] }}</td>
+            <td data-description="{{ spaces[45]['description'] }}">45.<br/>{{ spaces[45]['name'] }}</td>
+            <td data-description="{{ spaces[32]['description'] }}">32.<br/>{{ spaces[32]['name'] }}</td>
+            <td data-description="{{ spaces[11]['description'] }}">11.<br/>{{ spaces[11]['name'] }}</td>
         </tr>
         <tr>
-            <td>20</td>
-            <td>37</td>
-            <td>36</td>
-            <td>35</td>
-            <td>34</td>
-            <td>33</td>
-            <td>12</td>
+            <td data-description="{{ spaces[20]['description'] }}">20.<br/>{{ spaces[20]['name'] }}</td>
+            <td data-description="{{ spaces[37]['description'] }}">37.<br/>{{ spaces[37]['name'] }}</td>
+            <td data-description="{{ spaces[36]['description'] }}">36.<br/>{{ spaces[36]['name'] }}</td>
+            <td data-description="{{ spaces[35]['description'] }}">35.<br/>{{ spaces[35]['name'] }}</td>
+            <td data-description="{{ spaces[34]['description'] }}">34.<br/>{{ spaces[34]['name'] }}</td>
+            <td data-description="{{ spaces[33]['description'] }}">33.<br/>{{ spaces[33]['name'] }}</td>
+            <td data-description="{{ spaces[12]['description'] }}">12.<br/>{{ spaces[12]['name'] }}</td>
         </tr>
         <tr>
-            <td>19</td>
-            <td>18</td>
-            <td>17</td>
-            <td>16</td>
-            <td>15</td>
-            <td>14</td>
-            <td>13</td>
+            <td data-description="{{ spaces[19]['description'] }}">19.<br/>{{ spaces[19]['name'] }}</td>
+            <td data-description="{{ spaces[18]['description'] }}">18.<br/>{{ spaces[18]['name'] }}</td>
+            <td data-description="{{ spaces[17]['description'] }}">17.<br/>{{ spaces[17]['name'] }}</td>
+            <td data-description="{{ spaces[16]['description'] }}">16.<br/>{{ spaces[16]['name'] }}</td>
+            <td data-description="{{ spaces[15]['description'] }}">15.<br/>{{ spaces[15]['name'] }}</td>
+            <td data-description="{{ spaces[14]['description'] }}">14.<br/>{{ spaces[14]['name'] }}</td>
+            <td data-description="{{ spaces[13]['description'] }}">13.<br/>{{ spaces[13]['name'] }}</td>
         </tr>
     </table>
 {% endblock %}
