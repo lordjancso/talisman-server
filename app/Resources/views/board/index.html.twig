@@ -2,16 +2,21 @@
 
 {% block css %}
     <style>
+        body {
+            font-size: 12px;
+        }
+
         table {
             border-spacing: 0;
             border-collapse: collapse;
         }
 
         td {
-            width: 180px;
-            height: 180px;
+            width: 130px;
+            height: 130px;
             border: 1px solid black;
             text-align: center;
+            cursor: pointer;
         }
     </style>
 {% endblock %}
@@ -19,78 +24,57 @@
 {% block js %}
     <script>
         $(function () {
-            $('td').on('mouseover', function() {
+            $('td').on('click', function () {
+                var name = $(this).data('name');
                 var description = $(this).data('description');
-                console.log(description);
+
+                $('.name').html(name);
+                $('.description').html(nl2br(description));
+            });
+
+            $(document).on('click', '.action', function (e) {
+                e.preventDefault();
+                var path = $(this).data('action');
+
+                $.ajax({
+                    url: Routing.generate(path)
+                }).done(function(data, textStatus, jqXHR) {
+                    //
+                }).fail(function(jqXHR, textStatus, errorThrown) {
+                    //
+                });
             });
         });
+
+        function nl2br(str, is_xhtml) {
+            str = str.replace(/\\n/gi, '<br />');
+
+            var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br ' + '/>' : '<br>';
+
+            return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+        }
     </script>
 {% endblock %}
 
 {% block body %}
-    <table>
-        <tr>
-            <td data-description="{{ spaces[1]['description'] }}">1.<br/>{{ spaces[1]['name'] }}</td>
-            <td data-description="{{ spaces[2]['description'] }}">2.<br/>{{ spaces[2]['name'] }}</td>
-            <td data-description="{{ spaces[3]['description'] }}">3.<br/>{{ spaces[3]['name'] }}</td>
-            <td data-description="{{ spaces[4]['description'] }}">4.<br/>{{ spaces[4]['name'] }}</td>
-            <td data-description="{{ spaces[5]['description'] }}">5.<br/>{{ spaces[5]['name'] }}</td>
-            <td data-description="{{ spaces[6]['description'] }}">6.<br/>{{ spaces[6]['name'] }}</td>
-            <td data-description="{{ spaces[7]['description'] }}">7.<br/>{{ spaces[7]['name'] }}</td>
-        </tr>
-        <tr>
-            <td data-description="{{ spaces[24]['description'] }}">24.<br/>{{ spaces[24]['name'] }}</td>
-            <td data-description="{{ spaces[25]['description'] }}">25.<br/>{{ spaces[25]['name'] }}</td>
-            <td data-description="{{ spaces[26]['description'] }}">26.<br/>{{ spaces[26]['name'] }}</td>
-            <td data-description="{{ spaces[27]['description'] }}">27.<br/>{{ spaces[27]['name'] }}</td>
-            <td data-description="{{ spaces[28]['description'] }}">28.<br/>{{ spaces[28]['name'] }}</td>
-            <td data-description="{{ spaces[29]['description'] }}">29.<br/>{{ spaces[29]['name'] }}</td>
-            <td data-description="{{ spaces[8]['description'] }}">8.<br/>{{ spaces[8]['name'] }}</td>
-        </tr>
-        <tr>
-            <td data-description="{{ spaces[23]['description'] }}">23.<br/>{{ spaces[23]['name'] }}</td>
-            <td data-description="{{ spaces[40]['description'] }}">40.<br/>{{ spaces[40]['name'] }}</td>
-            <td data-description="{{ spaces[41]['description'] }}">41.<br/>{{ spaces[41]['name'] }}</td>
-            <td data-description="{{ spaces[42]['description'] }}">42.<br/>{{ spaces[42]['name'] }}</td>
-            <td data-description="{{ spaces[43]['description'] }}">43.<br/>{{ spaces[43]['name'] }}</td>
-            <td data-description="{{ spaces[30]['description'] }}">30.<br/>{{ spaces[30]['name'] }}</td>
-            <td data-description="{{ spaces[9]['description'] }}">9.<br/>{{ spaces[9]['name'] }}</td>
-        </tr>
-        <tr>
-            <td data-description="{{ spaces[22]['description'] }}">22.<br/>{{ spaces[22]['name'] }}</td>
-            <td data-description="{{ spaces[39]['description'] }}">39.<br/>{{ spaces[39]['name'] }}</td>
-            <td data-description="{{ spaces[48]['description'] }}">48.<br/>{{ spaces[48]['name'] }}</td>
-            <td data-description="{{ spaces[49]['description'] }}">49.<br/>{{ spaces[49]['name'] }}</td>
-            <td data-description="{{ spaces[44]['description'] }}">44.<br/>{{ spaces[44]['name'] }}</td>
-            <td data-description="{{ spaces[31]['description'] }}">31.<br/>{{ spaces[31]['name'] }}</td>
-            <td data-description="{{ spaces[10]['description'] }}">10.<br/>{{ spaces[10]['name'] }}</td>
-        </tr>
-        <tr>
-            <td data-description="{{ spaces[21]['description'] }}">21.<br/>{{ spaces[21]['name'] }}</td>
-            <td data-description="{{ spaces[38]['description'] }}">38.<br/>{{ spaces[38]['name'] }}</td>
-            <td data-description="{{ spaces[47]['description'] }}">47.<br/>{{ spaces[47]['name'] }}</td>
-            <td data-description="{{ spaces[46]['description'] }}">46.<br/>{{ spaces[46]['name'] }}</td>
-            <td data-description="{{ spaces[45]['description'] }}">45.<br/>{{ spaces[45]['name'] }}</td>
-            <td data-description="{{ spaces[32]['description'] }}">32.<br/>{{ spaces[32]['name'] }}</td>
-            <td data-description="{{ spaces[11]['description'] }}">11.<br/>{{ spaces[11]['name'] }}</td>
-        </tr>
-        <tr>
-            <td data-description="{{ spaces[20]['description'] }}">20.<br/>{{ spaces[20]['name'] }}</td>
-            <td data-description="{{ spaces[37]['description'] }}">37.<br/>{{ spaces[37]['name'] }}</td>
-            <td data-description="{{ spaces[36]['description'] }}">36.<br/>{{ spaces[36]['name'] }}</td>
-            <td data-description="{{ spaces[35]['description'] }}">35.<br/>{{ spaces[35]['name'] }}</td>
-            <td data-description="{{ spaces[34]['description'] }}">34.<br/>{{ spaces[34]['name'] }}</td>
-            <td data-description="{{ spaces[33]['description'] }}">33.<br/>{{ spaces[33]['name'] }}</td>
-            <td data-description="{{ spaces[12]['description'] }}">12.<br/>{{ spaces[12]['name'] }}</td>
-        </tr>
-        <tr>
-            <td data-description="{{ spaces[19]['description'] }}">19.<br/>{{ spaces[19]['name'] }}</td>
-            <td data-description="{{ spaces[18]['description'] }}">18.<br/>{{ spaces[18]['name'] }}</td>
-            <td data-description="{{ spaces[17]['description'] }}">17.<br/>{{ spaces[17]['name'] }}</td>
-            <td data-description="{{ spaces[16]['description'] }}">16.<br/>{{ spaces[16]['name'] }}</td>
-            <td data-description="{{ spaces[15]['description'] }}">15.<br/>{{ spaces[15]['name'] }}</td>
-            <td data-description="{{ spaces[14]['description'] }}">14.<br/>{{ spaces[14]['name'] }}</td>
-            <td data-description="{{ spaces[13]['description'] }}">13.<br/>{{ spaces[13]['name'] }}</td>
-        </tr>
+    <table style="float: left;">
+        {% for row in table %}
+            <tr>
+                {% for space in row %}
+
+                    <td data-name="{{ spaces[space]['name'] }}"
+                        data-description="{{ spaces[space]['description'] }}">
+                        {{ space }}.<br/>
+                        {{ spaces[space]['name'] }}<br/>
+                        {% if player.position == space %}<b>Player1</b><br/>{% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
     </table>
+    <div style="float: left; width: 650px;">
+        <div class="allowed_actions"></div>
+        <div class="name"></div>
+        <div class="description"></div>
+    </div>
 {% endblock %}
